@@ -272,13 +272,13 @@ export default function App() {
     <div className="overflow-x-hidden selection:bg-gold selection:text-white">
       {/* 1. HERO SECTION */}
       <header className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-[#0a0a0a]">
-        {/* Superior "Aura" Gradient */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[60vh] bg-gold/5 blur-[120px] rounded-full" />
+        {/* Background Decorative Aura */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[70vh] bg-gold/5 blur-[120px] rounded-full" />
         
-        {/* Background gradient for text readability */}
+        {/* Shadow Overlay for text readability at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
         
-        {/* Expert Image */}
+        {/* Expert Image (Large) */}
         <motion.div 
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -288,52 +288,33 @@ export default function App() {
           <img 
             src={EXPERT_PHOTOS[0]} 
             alt="Guilherme Nail Designer" 
-            className="h-[85vh] md:h-[95vh] w-auto object-contain object-bottom select-none pointer-events-none"
+            className="h-[95vh] md:h-[105vh] w-auto object-contain object-bottom select-none translate-y-[5vh]"
           />
         </motion.div>
 
-        {/* Content Container */}
-        <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-20 md:pb-24">
+        {/* Content Overlay */}
+        <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-20 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col items-center text-center"
+            className="flex flex-col items-center"
           >
-            {/* Authority Badge */}
-            <div className="mb-6 py-1.5 px-4 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm flex items-center gap-2">
-              <Star className="w-3.5 h-3.5 text-gold fill-gold" />
-              <span className="text-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">Referência em Itajaí - SC</span>
-            </div>
-
-            <h1 className="text-5xl md:text-8xl font-serif text-white mb-6 leading-[0.9] tracking-tight">
-              Guilherme <br className="md:hidden" />
-              <span className="text-gold italic">Ribeiro</span>
+            <h1 className="text-4xl md:text-7xl font-serif text-white mb-6 leading-[1.1]">
+              Eu sou <span className="text-gold italic font-bold">Guilherme</span>,<br />
+              <span className="text-white font-light uppercase tracking-[0.1em] text-2xl md:text-4xl">Nail Designer.</span>
             </h1>
-            
-            <div className="w-12 h-[1px] bg-gold/50 mb-6" />
 
-            <h2 className="text-lg md:text-2xl text-white/90 font-light max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
-              Especialista em unhas de <span className="font-semibold text-gold">alto padrão</span> e técnicas descomplicadas que elevam sua imagem.
+            <h2 className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
+              Especialista em elevar sua autoestima e imagem pessoal através de <span className="text-gold font-medium">técnicas exclusivas</span> e acabamento impecável.
             </h2>
             
-            <div className="flex flex-col items-center gap-4 w-full">
-              <WhatsAppButton 
-                text="Agendar Atendimento VIP" 
-                className="w-full md:w-auto"
-              />
-              
-              <div className="flex items-center gap-2 text-white/40 text-[10px] uppercase tracking-[0.15em] mt-2">
-                <ShieldCheck className="w-3 h-3" />
-                Segurança • Higiene • Exclusividade
-              </div>
-            </div>
+            <WhatsAppButton 
+              text="Fale comigo agora" 
+              subtext="Resposta rápida • Atendimento personalizado"
+              className="w-full md:w-auto"
+            />
           </motion.div>
-        </div>
-
-        {/* Subtle Side Label (Desktop Only) */}
-        <div className="absolute left-10 bottom-24 z-20 hidden lg:block rotate-90 origin-left">
-          <p className="text-white/20 text-[10px] uppercase tracking-[0.5em] font-bold">Guilherme Ribeiro Alves</p>
         </div>
       </header>
 
